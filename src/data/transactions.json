@@ -1,0 +1,91 @@
+{
+  "cardLimit": 1500,
+  "cardBalance": 17.30,
+  "currency": "$",
+  "dailyPoints": 456000,
+  "transactions": [
+    {
+      "id": 1,
+      "type": "Credit",
+      "amount": 14.06,
+      "currency": "$",
+      "name": "Apple",
+      "description": "Card Number Used",
+      "date": "2025-05-29",
+      "isPending": true,
+      "authorizedUser": "Diana",
+      "icon": "apple",
+      "cashbackPercent": 3
+    },
+    {
+      "id": 2,
+      "type": "Payment",
+      "amount": 174.00,
+      "currency": "$",
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank National Association",
+      "date": "2025-05-27",
+      "isPending": false,
+      "icon": "bank"
+    },
+    {
+      "id": 3,
+      "type": "Credit",
+      "amount": 3.24,
+      "currency": "$",
+      "name": "Apple",
+      "description": "Card Number Used",
+      "date": "2025-05-27",
+      "isPending": false,
+      "authorizedUser": "Diana",
+      "icon": "apple",
+      "cashbackPercent": 3
+    },
+    {
+      "id": 4,
+      "type": "Payment",
+      "amount": 99.71,
+      "currency": "$",
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank National Association",
+      "date": "2025-05-24",
+      "isPending": false,
+      "icon": "bank"
+    },
+    {
+      "id": 5,
+      "type": "Payment",
+      "amount": 73.58,
+      "currency": "$",
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank National Association",
+      "date": "2025-05-26",
+      "isPending": false,
+      "icon": "bank"
+    },
+    {
+      "id": 6,
+      "type": "Credit",
+      "amount": 21.61,
+      "currency": "$",
+      "name": "IKEA",
+      "description": "Round Rock, TX",
+      "date": "2022-10-01",
+      "isPending": false,
+      "icon": "store",
+      "cashbackPercent": 2
+    },
+    {
+      "id": 7,
+      "type": "Credit",
+      "amount": 73.58,
+      "currency": "$",
+      "name": "Target",
+      "description": "Cedar Park, TX",
+      "date": "2022-09-30",
+      "isPending": false,
+      "icon": "shopping-cart",
+      "cashbackPercent": 2
+    }
+  ]
+} 

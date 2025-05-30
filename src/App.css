@@ -1,0 +1,487 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #666;
+  --background-color: #f5f5f5;
+  --card-background: #fff;
+  --border-color: #e0e0e0;
+  --success-color: #4CAF50;
+  --pending-color: #FFA000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, system-ui, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+@media (min-width: 431px) {
+  body {
+    background-color: #E5E5E5;
+  }
+  
+  .app {
+    margin: 0 auto;
+  }
+}
+
+/* Card Balance */
+.card-balance {
+  background-color: var(--card-background);
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-balance h2 {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 450;
+}
+
+.balance {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.available {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+/* No Payment Due */
+.no-payment-due {
+  background-color: var(--card-background);
+  padding: 0.5rem 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 0;
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; */
+  position: relative;
+}
+
+.no-payment-due-content {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; */
+  text-align: left;
+}
+
+.no-payment-due h2 {
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+  font-weight: 450;
+}
+
+.no-payment-due p {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.check-circle {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-circle svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.no-payment-due .check-icon,
+.no-payment-due .check-icon path:last-child {
+  display: none;
+}
+
+/* Daily Points */
+.daily-points {
+  background-color: var(--card-background);
+  padding: 1.5rem 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.daily-points h2 {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 450;
+}
+
+.points {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+/* Transactions Title */
+.transactions-title {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.2rem;
+  text-align: left;
+  padding: 0 4px;
+}
+
+/* Transactions Section */
+.transactions-section {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 0.5rem 0.9rem;
+}
+
+.transactions-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* Transaction Item */
+.transaction-item {
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  width: 100%;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: white;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.transaction-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  width: 100%;
+}
+
+.transaction-main-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-name {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding-right: 16px;
+  max-width: calc(100% - 16px);
+}
+
+.transaction-amount-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  margin-right: 8px;
+  min-width: fit-content;
+}
+
+.transaction-amount {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.transaction-chevron {
+  color: var(--secondary-color);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.transaction-secondary {
+  color: var(--secondary-color);
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 16px;
+  max-width: calc(100% - 16px);
+}
+
+.transaction-meta {
+  color: var(--secondary-color);
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 16px;
+  max-width: calc(100% - 16px);
+}
+
+.pending {
+  color: var(--pending-color);
+}
+
+.cashback {
+  color: var(--success-color);
+  font-size: 12px;
+  text-align: right;
+  white-space: nowrap;
+  background-color: #F5F5F5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.authorized-user {
+  font-weight: 500;
+}
+
+/* Transaction Detail */
+.transaction-detail {
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 12px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.transaction-details-extended {
+  margin-top: 20px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0;
+}
+
+.detail-row.total {
+  margin-top: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.detail-status {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.detail-payment-method {
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.detail-row.total, .detail-status,
+.detail-row.total {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Links */
+.transaction-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.transaction-link:last-child {
+  border-bottom: none;
+}
+
+/* Top Blocks Grid */
+.top-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+
+.card-balance {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+.no-payment-due {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.transaction-chevron {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+/* Transaction Detail Page */
+.transaction-detail-page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.transaction-detail-header {
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+}
+
+.detail-amount {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.detail-merchant {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--secondary-color);
+}
+
+.detail-date {
+  color: var(--secondary-color);
+  font-size: 0.875rem;
+}
+
+.transaction-detail-card {
+  background: var(--card-background);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.detail-row.total {
+  margin-top: 0;
+  padding-top: 0.75rem;
+  border-bottom: none;
+}
+
+
+
