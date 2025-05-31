@@ -2,6 +2,32 @@
 
 A modern, mobile-first digital wallet application built with React and TypeScript. The app provides a clean, intuitive interface for managing transactions, viewing card balances, and tracking rewards points.
 
+## Screenshots
+
+### Main Dashboard
+![Main Dashboard](screenshots/dashboard.png)
+
+The main dashboard provides a comprehensive overview of your financial status:
+- Current card balance with available credit
+- Payment status for the current month (May)
+- Daily reward points
+- Latest transactions list with:
+  - Transaction icons and merchant names
+  - Transaction amounts and cashback percentages
+  - Status indicators (Pending/Completed)
+  - Dates in relative format (Yesterday, Tuesday, etc.)
+  - Payment method used
+
+### Transaction Detail
+![Transaction Detail](screenshots/transaction-detail.png)
+
+The transaction detail view shows comprehensive information about each purchase:
+- Transaction amount in large, clear typography
+- Merchant name and timestamp
+- Transaction status (Pending/Completed)
+- Payment method used (RBC Visa Credit Card)
+- Total amount breakdown
+
 ## Features
 
 - 📱 Mobile-optimized interface
@@ -10,7 +36,6 @@ A modern, mobile-first digital wallet application built with React and TypeScrip
 - ✅ Payment status indicators
 - 🏆 Daily points tracking
 - 💰 Cashback percentage display
-- 🔄 Real-time transaction status (Pending/Approved)
 
 ## Tech Stack
 
@@ -56,7 +81,11 @@ wallet-app/
 │   ├── components/         # Reusable UI components
 │   ├── pages/             # Page components
 │   ├── types/             # TypeScript type definitions
-│   ├── data/             # Mock data
+│   ├── data/              # Mock data
+│   ├── utils/             # Utility functions
+│   │   ├── formatters.ts  # Date and amount formatting
+│   │   ├── constants.ts   # App-wide constants and configurations
+│   │   └── pointsCalculator.ts  # Daily points calculation
 │   ├── App.tsx           # Main app component
 │   └── App.css           # Global styles
 ├── public/               # Static assets
