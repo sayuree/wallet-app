@@ -5,7 +5,7 @@ A modern, mobile-first digital wallet application built with React and TypeScrip
 ## Screenshots
 
 ### Main Dashboard
-![Main Dashboard](screenshots/dashboard.png)
+![Main Dashboard](screenshots/main-dashboard.png)
 
 The main dashboard provides a comprehensive overview of your financial status:
 - Current card balance with available credit
@@ -18,8 +18,8 @@ The main dashboard provides a comprehensive overview of your financial status:
   - Dates in relative format (Yesterday, Tuesday, etc.)
   - Payment method used
 
-### Transaction Detail
-![Transaction Detail](screenshots/transaction-detail.png)
+### Transaction Details
+![Transaction Details](screenshots/transaction-details.png)
 
 The transaction detail view shows comprehensive information about each purchase:
 - Transaction amount in large, clear typography
