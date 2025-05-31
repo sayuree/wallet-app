@@ -1,6 +1,6 @@
 import type { Season, SeasonInfo } from "../types/index";
 
-const memo = new Map<number, number>();
+// const memo = new Map<number, number>();
 
 const POINTS_FORMAT = [
   { threshold: 1_000_000_000, suffix: 'B' },

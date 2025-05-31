@@ -112,8 +112,7 @@ The app uses CSS variables for consistent theming:
 
 ## Mobile-First Design
 
-- Optimized for mobile devices with max-width of 430px
-- Responsive layout adjustments for larger screens
+- Optimized for mobile devices
 - Touch-friendly interface elements
 - Clear visual hierarchy
 
@@ -126,12 +125,6 @@ The app uses CSS variables for consistent theming:
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
-### Type Checking
-
-```bash
-npm run type-check
-```
-
 ## Contributing
 
 1. Fork the repository
@@ -139,7 +132,3 @@ npm run type-check
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
