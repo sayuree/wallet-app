@@ -13,10 +13,24 @@ export interface Transaction {
   paymentMethod?: string;
 }
 
+export type PaymentStatus = {
+  month: string;
+  isPaid: boolean;
+}
+
 export interface WalletData {
-  cardLimit: number;
-  cardBalance: number;
-  currency: string;
-  dailyPoints: number;
+  paymentStatus: PaymentStatus;
   transactions: Transaction[];
-} 
+}
+
+export interface TransactionComponentProps {
+    transaction: Transaction;
+}
+
+export type Season = 'spring' | 'summer' | 'autumn' | 'winter';
+
+export type SeasonInfo = {
+  name: Season;
+  start: [number, number]; // [month, day]
+  end: [number, number];
+};
