@@ -22,12 +22,8 @@ export const TransactionsList = () => {
   return (
     <div className="transactions-list">
       <div className="top-blocks">
-        <CardBalance 
-          balance={data.cardBalance} 
-          limit={data.cardLimit} 
-          currency={data.currency} 
-        />
-        <NoPaymentDue />
+        <CardBalance />
+        <NoPaymentDue month={data.paymentStatus.month} isPaid={data.paymentStatus.isPaid} />
         <DailyPoints/>
       </div>
 
