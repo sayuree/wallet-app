@@ -1,30 +1,21 @@
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import type { Transaction } from '../types';
+import { formatDateTime, formatAmount } from '../utils/formatters';
+import type { TransactionComponentProps } from '../types/index';
 
-const formatDateTime = (dateString: string) => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', {
-    month: 'numeric',
-    day: 'numeric',
-    year: '2-digit',
-    hour: 'numeric',
-    minute: 'numeric',
-  });
-};
-
-const formatAmount = (amount: number, type: 'Credit' | 'Payment') => {
-  return `${type === 'Payment' ? '+' : ''}$${amount.toFixed(2)}`;
-};
-
-export const TransactionDetail = ({ transaction }: { transaction: Transaction }) => {
+/**
+ * Displays detailed information about a specific transaction
+ * @param transaction - The transaction data to display
+ */
+export const TransactionDetail = ({ transaction }: TransactionComponentProps) => {
   const navigate = useNavigate();
-  const { amount, name, date, type, isPending } = transaction;
-
+  const { amount, name, date, type, isPending, paymentMethod } = transaction;
+  const handleGoBack = () => navigate(-1);
+  
   return (
     <div className="transaction-detail-page">
-      <button onClick={() => navigate(-1)} className="back-button">
+      <button onClick={handleGoBack} className="back-button">
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
 
@@ -41,7 +32,7 @@ export const TransactionDetail = ({ transaction }: { transaction: Transaction })
           <div className="detail-status">Status: {isPending ? 'Pending' : 'Approved'} </div>
         </div>
         <div className="detail-row">
-          <div className="detail-payment-method">RBC Bank Debit Card</div>
+          <div className="detail-payment-method">{paymentMethod}</div>
         </div>
         <div className="detail-row total">
           <div className="detail-label">Total</div>

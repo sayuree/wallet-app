@@ -1,15 +1,19 @@
-export const NoPaymentDue = () => {
+import type { PaymentStatus } from "../types/index";
+import { CheckCircleIcon } from "./CheckCircleIcon";
+
+/**
+ * Displays payment status
+ * @param month - The billing month (e.g. "September")
+ * @param isPaid - Payment completion status
+ */
+export const NoPaymentDue = ({ month, isPaid }: PaymentStatus) => {
   return (
     <div className="no-payment-due">
       <div className="no-payment-due-content">
         <h2>No Payment Due</h2>
-        <p>You've paid your September balance.</p>
+        <p>You've {isPaid ? 'paid' : 'not paid'} your {month} balance.</p>
       </div>
-      <div className="check-circle">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 12.5L11 14.5L15.5 10" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
+      <CheckCircleIcon />
     </div>
   );
 }; 
