@@ -1,8 +1,8 @@
 {
-  "cardLimit": 1500,
-  "cardBalance": 17.30,
-  "currency": "$",
-  "dailyPoints": 456000,
+  "paymentStatus": {
+    "month": "May",
+    "isPaid": true
+  },
   "transactions": [
     {
       "id": 1,
@@ -11,11 +11,12 @@
       "currency": "$",
       "name": "Apple",
       "description": "Card Number Used",
-      "date": "2025-05-29",
+      "date": "2025-05-31T12:47:00",
       "isPending": true,
       "authorizedUser": "Diana",
       "icon": "apple",
-      "cashbackPercent": 3
+      "cashbackPercent": 3,
+      "paymentMethod": "RBC Visa Credit Card"
     },
     {
       "id": 2,
@@ -24,9 +25,10 @@
       "currency": "$",
       "name": "Payment",
       "description": "From JPMorgan Chase Bank National Association",
-      "date": "2025-05-27",
+      "date": "2025-05-27T15:30:00",
       "isPending": false,
-      "icon": "bank"
+      "icon": "bank",
+      "paymentMethod": "Bank Transfer"
     },
     {
       "id": 3,
@@ -35,11 +37,12 @@
       "currency": "$",
       "name": "Apple",
       "description": "Card Number Used",
-      "date": "2025-05-27",
+      "date": "2025-05-27T09:15:00",
       "isPending": false,
       "authorizedUser": "Diana",
       "icon": "apple",
-      "cashbackPercent": 3
+      "cashbackPercent": 3,
+      "paymentMethod": "RBC Visa Credit Card"
     },
     {
       "id": 4,
@@ -48,9 +51,10 @@
       "currency": "$",
       "name": "Payment",
       "description": "From JPMorgan Chase Bank National Association",
-      "date": "2025-05-24",
+      "date": "2025-05-25T11:20:00",
       "isPending": false,
-      "icon": "bank"
+      "icon": "bank",
+      "paymentMethod": "Bank Transfer"
     },
     {
       "id": 5,
@@ -59,9 +63,10 @@
       "currency": "$",
       "name": "Payment",
       "description": "From JPMorgan Chase Bank National Association",
-      "date": "2025-05-26",
+      "date": "2025-05-26T14:05:00",
       "isPending": false,
-      "icon": "bank"
+      "icon": "bank",
+      "paymentMethod": "Bank Transfer"
     },
     {
       "id": 6,
@@ -70,10 +75,11 @@
       "currency": "$",
       "name": "IKEA",
       "description": "Round Rock, TX",
-      "date": "2022-10-01",
+      "date": "2025-05-25T10:12:00",
       "isPending": false,
       "icon": "store",
-      "cashbackPercent": 2
+      "cashbackPercent": 2,
+      "paymentMethod": "RBC Debit Card"
     },
     {
       "id": 7,
@@ -82,10 +88,50 @@
       "currency": "$",
       "name": "Target",
       "description": "Cedar Park, TX",
-      "date": "2022-09-30",
+      "date": "2025-05-24T10:45:00",
       "isPending": false,
       "icon": "shopping-cart",
-      "cashbackPercent": 2
+      "cashbackPercent": 2,
+      "paymentMethod": "RBC Debit Card"
+    },
+    {
+      "id": 8,
+      "type": "Credit",
+      "amount": 45.99,
+      "currency": "$",
+      "name": "Starbucks",
+      "description": "Austin, TX",
+      "date": "2025-05-23T13:36:00",
+      "isPending": false,
+      "icon": "coffee",
+      "cashbackPercent": 3,
+      "paymentMethod": "RBC Visa Credit Card"
+    },
+    {
+      "id": 9,
+      "type": "Credit",
+      "amount": 129.95,
+      "currency": "$",
+      "name": "Best Buy",
+      "description": "Round Rock, TX",
+      "date": "2025-05-22T11:47:00",
+      "isPending": false,
+      "icon": "electronics",
+      "cashbackPercent": 1,
+      "paymentMethod": "RBC Visa Credit Card"
+    },
+    {
+      "id": 10,
+      "type": "Credit",
+      "amount": 67.32,
+      "currency": "$",
+      "name": "H-E-B Grocery",
+      "description": "Cedar Park, TX",
+      "date": "2025-05-22T12:55:00",
+      "isPending": false,
+      "icon": "grocery",
+      "cashbackPercent": 2,
+      "paymentMethod": "RBC Debit Card"
     }
   ]
 } 
