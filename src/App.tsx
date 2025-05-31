@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TransactionsList } from './pages/TransactionsList';
-import { TransactionDetail } from './components/TransactionDetail';
+import { TransactionDetail } from './pages/TransactionDetail';
 import transactionsData from './data/transactions.json';
 import type { Transaction } from './types';
 import './App.css';
